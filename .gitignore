@@ -1,2 +1,3 @@
 # Python Directories and Files
 __pycache__
+.ipynb_checkpoints/
