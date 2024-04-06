@@ -12,13 +12,15 @@ import numpy as np
 import matplotlib.pyplot as plt
 from matplotlib.patches import FancyArrowPatch
 from ipywidgets import Output
+import os # added import for getting os directories
 
 np.set_printoptions(precision=2)
 
 dlc = dict(dlblue = '#0096ff', dlorange = '#FF9300', dldarkred='#C00000', dlmagenta='#FF40FF', dlpurple='#7030A0')
 dlblue = '#0096ff'; dlorange = '#FF9300'; dldarkred='#C00000'; dlmagenta='#FF40FF'; dlpurple='#7030A0'
 dlcolors = [dlblue, dlorange, dldarkred, dlmagenta, dlpurple]
-plt.style.use('./deeplearning.mplstyle')
+# Updated the deeplearning.mplstyle's directory to match for any working directory
+plt.style.use(os.path.join(os.getcwd(), "deeplearning.mplstyle"))
 
 def sigmoid(z):
     """
